@@ -13,15 +13,15 @@ public class SimpleController {
     @Autowired
     TestService service;
 
+    @GetMapping("/")
+    public String index(Model model) {
+        return "index";
+    }
+
     @GetMapping("/hello")
     public String hello(Model model) {
         service.test();
         model.addAttribute("name", "Spring!");
         return "hello";
-    }
-
-    @GetMapping("/")
-    public String index() {
-        return "index";
     }
 }

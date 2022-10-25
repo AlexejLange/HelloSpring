@@ -5,15 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>spring</groupId>
-    <artifactId>HelloSpring</artifactId>
+    <artifactId>SpringMVC</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <java-version>1.8</java-version>
         <spring-version>5.2.22.RELEASE</spring-version>
+        <thymeleaf-version>3.0.15.RELEASE</thymeleaf-version>
     </properties>
 
     <dependencies>
@@ -23,18 +21,18 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring-version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf-spring5 -->
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring5</artifactId>
+            <version>${thymeleaf-version}</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
             <scope>provided</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
         </dependency>
     </dependencies>
 
@@ -46,20 +44,15 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>${java-version}</source>
-                    <target>${java-version}</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
             <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                    <warName>spring-mvc-example</warName>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
+                <version>3.3.2</version>
             </plugin>
             <!-- https://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
             <plugin>
