@@ -1,18 +1,19 @@
 package spring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import spring.domain.Person;
 import spring.service.PersonService;
 
-@RestController
+@Controller
 public class SimpleController {
 
     @Autowired
     PersonService personService;
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String index(Model model) {
         return "index";
     }
