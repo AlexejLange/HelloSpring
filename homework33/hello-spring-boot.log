@@ -1,0 +1,35 @@
+2022-11-20 18:23:01.459  INFO 10900 --- [main] spring.SimpleWebApp                      : Starting SimpleWebApp using Java 1.8.0_202 on AlexejLange with PID 10900 (C:\Users\Alexej\TelRan\HelloSpring\homework33\target\classes started by Alexej in C:\Users\Alexej\TelRan\HelloSpring\homework33)
+2022-11-20 18:23:01.462  INFO 10900 --- [main] spring.SimpleWebApp                      : No active profile set, falling back to 1 default profile: "default"
+2022-11-20 18:23:02.234  INFO 10900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-20 18:23:02.325  INFO 10900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interfaces.
+2022-11-20 18:23:03.210  INFO 10900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-11-20 18:23:03.222  INFO 10900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-20 18:23:03.222  INFO 10900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-20 18:23:03.391  INFO 10900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-20 18:23:03.392  INFO 10900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1875 ms
+2022-11-20 18:23:03.584  INFO 10900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-20 18:23:04.099  INFO 10900 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-20 18:23:04.272  INFO 10900 --- [main] liquibase.database                       : Set default schema name to public
+2022-11-20 18:23:04.360  INFO 10900 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-11-20 18:23:04.753  INFO 10900 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-11-20 18:23:04.820  INFO 10900 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-11-20 18:23:04.943  INFO 10900 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-20 18:23:05.000  INFO 10900 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-20 18:23:05.186  INFO 10900 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-20 18:23:05.334  INFO 10900 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-20 18:23:06.131  INFO 10900 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-20 18:23:06.140  INFO 10900 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-20 18:23:06.705  WARN 10900 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-20 18:23:06.900  INFO 10900 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-20 18:23:07.261  INFO 10900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-11-20 18:23:07.279  INFO 10900 --- [main] spring.SimpleWebApp                      : Started SimpleWebApp in 6.496 seconds (JVM running for 6.968)
+2022-11-20 18:24:43.748  INFO 10900 --- [http-nio-8090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-20 18:24:43.749  INFO 10900 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-20 18:24:43.750  INFO 10900 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-20 18:25:06.631  INFO 10900 --- [http-nio-8090-exec-5] spring.service.PersonService             : Added person {id=3, firstName='test1', lastName='Person'}
+2022-11-20 18:25:27.825  INFO 10900 --- [http-nio-8090-exec-7] spring.service.PersonService             : Added person {id=4, firstName='test2', lastName='Person'}
+2022-11-20 18:25:41.918  INFO 10900 --- [http-nio-8090-exec-10] spring.service.PersonService             : Updated person {id=3, firstName='Ivan', lastName='Ivanov'}
+2022-11-20 18:25:47.722  INFO 10900 --- [http-nio-8090-exec-3] spring.service.PersonService             : Remove person {id=4, firstName='test2', lastName='Person'}
+2022-11-20 18:25:55.140  INFO 10900 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-20 18:25:55.142  INFO 10900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-20 18:25:55.146  INFO 10900 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
