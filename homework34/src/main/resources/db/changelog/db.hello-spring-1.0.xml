@@ -1,0 +1,22 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="Alexej" id="#1">
+        <sql>CREATE SEQUENCE hibernate_sequence START 1;</sql>
+        <createTable tableName="person">
+            <column name="person_id" type="int">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="firstname" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="lastname" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

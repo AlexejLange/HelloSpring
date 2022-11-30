@@ -1,0 +1,203 @@
+2022-11-30 15:39:55.776  INFO 8692 --- [main] spring.SimpleWebApp                      : Starting SimpleWebApp using Java 11.0.13 on AlexejLange with PID 8692 (C:\Users\Alexej\TelRan\HelloSpring\homework34\target\classes started by Alexej in C:\Users\Alexej\TelRan\HelloSpring\homework34)
+2022-11-30 15:39:55.793  INFO 8692 --- [main] spring.SimpleWebApp                      : No active profile set, falling back to 1 default profile: "default"
+2022-11-30 15:39:56.772  INFO 8692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-30 15:39:56.870  INFO 8692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interfaces.
+2022-11-30 15:39:57.982  INFO 8692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-11-30 15:39:57.995  INFO 8692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-30 15:39:57.996  INFO 8692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-30 15:39:58.173  INFO 8692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-30 15:39:58.173  INFO 8692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2295 ms
+2022-11-30 15:39:58.434  INFO 8692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-30 15:39:58.753  INFO 8692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-30 15:39:58.952  INFO 8692 --- [main] liquibase.database                       : Set default schema name to public
+2022-11-30 15:39:59.064  INFO 8692 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-11-30 15:39:59.694  INFO 8692 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-11-30 15:39:59.731  INFO 8692 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-11-30 15:39:59.734  WARN 8692 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.hello-spring-1.0.xml::#1::Alexej was: 8:9867eb32fcd2e5f404fafb1b9c2273c3 but is now: 8:8836dae73e10c67252f95606bedf3e69
+
+2022-11-30 15:39:59.735  INFO 8692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-30 15:39:59.748  INFO 8692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-30 15:39:59.753  INFO 8692 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-30 15:39:59.768  INFO 8692 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-30 15:39:59.808 ERROR 8692 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.hello-spring-1.0.xml::#1::Alexej was: 8:9867eb32fcd2e5f404fafb1b9c2273c3 but is now: 8:8836dae73e10c67252f95606bedf3e69
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at spring.SimpleWebApp.main(SimpleWebApp.java:10) ~[classes/:na]
+Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.hello-spring-1.0.xml::#1::Alexej was: 8:9867eb32fcd2e5f404fafb1b9c2273c3 but is now: 8:8836dae73e10c67252f95606bedf3e69
+
+	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:337) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Liquibase.lambda$update$1(Liquibase.java:257) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:2447) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:236) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:221) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:328) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:283) ~[liquibase-core-4.17.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 18 common frames omitted
+
+2022-11-30 15:43:35.726  INFO 20540 --- [main] spring.SimpleWebApp                      : Starting SimpleWebApp using Java 11.0.13 on AlexejLange with PID 20540 (C:\Users\Alexej\TelRan\HelloSpring\homework34\target\classes started by Alexej in C:\Users\Alexej\TelRan\HelloSpring\homework34)
+2022-11-30 15:43:35.730  INFO 20540 --- [main] spring.SimpleWebApp                      : No active profile set, falling back to 1 default profile: "default"
+2022-11-30 15:43:36.620  INFO 20540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-30 15:43:36.701  INFO 20540 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interfaces.
+2022-11-30 15:43:37.717  INFO 20540 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-11-30 15:43:37.729  INFO 20540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-30 15:43:37.729  INFO 20540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-30 15:43:37.922  INFO 20540 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-30 15:43:37.923  INFO 20540 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2098 ms
+2022-11-30 15:43:38.137  INFO 20540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-30 15:43:38.519  INFO 20540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-30 15:43:38.767  INFO 20540 --- [main] liquibase.database                       : Set default schema name to public
+2022-11-30 15:43:38.876  INFO 20540 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-11-30 15:43:39.391  INFO 20540 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-11-30 15:43:39.431  INFO 20540 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-11-30 15:43:39.435  WARN 20540 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.hello-spring-1.0.xml::#1::Alexej was: 8:9867eb32fcd2e5f404fafb1b9c2273c3 but is now: 8:8836dae73e10c67252f95606bedf3e69
+
+2022-11-30 15:43:39.437  INFO 20540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-30 15:43:39.449  INFO 20540 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-30 15:43:39.454  INFO 20540 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-30 15:43:39.466  INFO 20540 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-30 15:43:39.503 ERROR 20540 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.hello-spring-1.0.xml::#1::Alexej was: 8:9867eb32fcd2e5f404fafb1b9c2273c3 but is now: 8:8836dae73e10c67252f95606bedf3e69
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at spring.SimpleWebApp.main(SimpleWebApp.java:10) ~[classes/:na]
+Caused by: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/db.hello-spring-1.0.xml::#1::Alexej was: 8:9867eb32fcd2e5f404fafb1b9c2273c3 but is now: 8:8836dae73e10c67252f95606bedf3e69
+
+	at liquibase.changelog.DatabaseChangeLog.validate(DatabaseChangeLog.java:337) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Liquibase.lambda$update$1(Liquibase.java:257) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:180) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Scope.child(Scope.java:179) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Scope.child(Scope.java:158) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:2447) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:236) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:221) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:328) ~[liquibase-core-4.17.1.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:283) ~[liquibase-core-4.17.1.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.23.jar:5.3.23]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.23.jar:5.3.23]
+	... 18 common frames omitted
+
+2022-11-30 15:44:05.296  INFO 21600 --- [main] spring.SimpleWebApp                      : Starting SimpleWebApp using Java 11.0.13 on AlexejLange with PID 21600 (C:\Users\Alexej\TelRan\HelloSpring\homework34\target\classes started by Alexej in C:\Users\Alexej\TelRan\HelloSpring\homework34)
+2022-11-30 15:44:05.300  INFO 21600 --- [main] spring.SimpleWebApp                      : No active profile set, falling back to 1 default profile: "default"
+2022-11-30 15:44:06.126  INFO 21600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-30 15:44:06.197  INFO 21600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+2022-11-30 15:44:07.216  INFO 21600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-11-30 15:44:07.230  INFO 21600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-30 15:44:07.230  INFO 21600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-30 15:44:07.394  INFO 21600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-30 15:44:07.395  INFO 21600 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2017 ms
+2022-11-30 15:44:07.604  INFO 21600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-30 15:44:07.966  INFO 21600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-30 15:44:08.132  INFO 21600 --- [main] liquibase.database                       : Set default schema name to public
+2022-11-30 15:44:08.250  INFO 21600 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-11-30 15:44:08.820  INFO 21600 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-11-30 15:44:08.899  INFO 21600 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-11-30 15:44:09.197  INFO 21600 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-30 15:44:09.373  INFO 21600 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-30 15:44:09.775  INFO 21600 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-30 15:44:10.058  INFO 21600 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-30 15:44:10.765  INFO 21600 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-30 15:44:10.773  INFO 21600 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-30 15:44:11.334  WARN 21600 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-30 15:44:11.642  INFO 21600 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-30 15:44:12.169  INFO 21600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-11-30 15:44:12.189  INFO 21600 --- [main] spring.SimpleWebApp                      : Started SimpleWebApp in 7.554 seconds (JVM running for 8.168)
+2022-11-30 15:44:20.658  INFO 21600 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-30 15:44:20.659  INFO 21600 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-30 15:44:20.661  INFO 21600 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-11-30 15:44:33.735  INFO 21600 --- [http-nio-8090-exec-4] spring.service.PersonService             : Added person {id=1, firstName='vgrre', lastName='rgregr'}
+2022-11-30 15:44:39.520  INFO 21600 --- [http-nio-8090-exec-7] spring.service.PersonService             : Updated person {id=1, firstName='vgrretrt', lastName='rgregrewtew'}
+2022-11-30 15:44:42.405  INFO 21600 --- [http-nio-8090-exec-9] spring.service.PersonService             : Removed person {id=1, firstName='vgrretrt', lastName='rgregrewtew'}
+2022-11-30 15:46:49.472  INFO 21600 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-30 15:46:49.472  INFO 21600 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-11-30 15:46:49.480  INFO 21600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-30 15:46:49.487  INFO 21600 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-30 15:53:14.716  INFO 9188 --- [main] spring.PersonServiceTest                 : Starting PersonServiceTest using Java 11.0.13 on AlexejLange with PID 9188 (started by Alexej in C:\Users\Alexej\TelRan\HelloSpring\homework34)
+2022-11-30 15:53:14.719  INFO 9188 --- [main] spring.PersonServiceTest                 : No active profile set, falling back to 1 default profile: "default"
+2022-11-30 15:53:15.655  INFO 9188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-30 15:53:15.716  INFO 9188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interfaces.
+2022-11-30 15:53:16.408  INFO 9188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-30 15:53:16.864  INFO 9188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-30 15:53:17.059  INFO 9188 --- [main] liquibase.database                       : Set default schema name to public
+2022-11-30 15:53:17.170  INFO 9188 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-11-30 15:53:17.759  INFO 9188 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-11-30 15:53:17.842  INFO 9188 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-11-30 15:53:18.198  INFO 9188 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-30 15:53:18.353  INFO 9188 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-30 15:53:18.686  INFO 9188 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-30 15:53:18.947  INFO 9188 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-11-30 15:53:19.579  WARN 9188 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2022-11-30 15:53:19.579  WARN 9188 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : таблица "person" не существует, пропускается
+2022-11-30 15:53:19.600  INFO 9188 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-30 15:53:19.612  INFO 9188 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-30 15:53:20.500  WARN 9188 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-30 15:53:21.112  INFO 9188 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/telran'
+2022-11-30 15:53:21.144  INFO 9188 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-30 15:53:21.909  INFO 9188 --- [main] spring.PersonServiceTest                 : Started PersonServiceTest in 7.681 seconds (JVM running for 8.914)
+2022-11-30 15:53:22.434  INFO 9188 --- [main] spring.service.PersonService             : Added person {id=1, firstName='Ivan', lastName='Ivanov'}
+2022-11-30 15:53:22.474  INFO 9188 --- [main] spring.service.PersonService             : Added person {id=2, firstName='Sidor', lastName='Sidorov'}
+2022-11-30 15:53:22.543  INFO 9188 --- [main] spring.service.PersonService             : Added person {id=3, firstName='Petr', lastName='Petrov'}
+2022-11-30 15:53:22.587  INFO 9188 --- [main] spring.service.PersonService             : Removed person {id=3, firstName='Petr', lastName='Petrov'}
+2022-11-30 15:53:22.601  INFO 9188 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-30 15:53:22.603  INFO 9188 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-11-30 15:53:22.617  INFO 9188 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-30 15:53:22.627  INFO 9188 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
