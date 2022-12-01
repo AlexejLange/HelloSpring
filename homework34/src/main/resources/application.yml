@@ -6,27 +6,15 @@ spring:
     hiddenmethod:
       filter:
         enabled: true
-  #jpa:
-  #  database-platform: org.hibernate.dialect.PostgreSQLDialect
-  #  hibernate:
-  #    show-sql: true
+
   jpa:
     hibernate:
-      ddl-auto: create-drop
       show-sql: true
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/telran
     username: postgres
     password: root
-  #  driverClassName: org.h2.Driver
-  #  url: jdbc:h2:mem:testdb;DATABASE_TO_UPPER=false
-  #  username: sa
-  #  password:
-  #h2:
-  #  console:
-  #    enabled: true
-  #    path: /h2-console
 
 logging:
   loggingXml: false

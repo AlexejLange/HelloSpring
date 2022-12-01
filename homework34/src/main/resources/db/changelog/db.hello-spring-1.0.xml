@@ -5,9 +5,8 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
 
     <changeSet author="Alexej" id="#1">
-        <sql>CREATE SEQUENCE hibernate_sequence START 1;</sql>
         <createTable tableName="person">
-            <column name="person_id" type="int">
+            <column name="person_id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" />
             </column>
             <column name="firstname" type="varchar(50)">

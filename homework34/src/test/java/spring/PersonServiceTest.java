@@ -1,5 +1,12 @@
 package spring;
 
+/**
+ * Spring Boot (Spring Boot + h2 database + tests)
+ * @author Alexej Lange
+ * @version 29 Nov 2022
+ *
+ */
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
