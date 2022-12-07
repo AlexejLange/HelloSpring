@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Person list page</title>
+</head>
+<body>
+<h2>Person list</h2>
+<p><a href="/add">Add Person</a></p>
+<table border="1">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr th:each ="person : ${persons}">
+        <td th:utext="${person.firstName}">...</td>
+        <td th:utext="${person.lastName}">...</td>
+        <td>
+            <form th:action="@{/delete}" th:method="DELETE">
+                <input type="hidden" name="id" th:value="${person.Id}">
+                <button>delete</button>
+            </form>
+        </td>
+        <td>
+            <a th:href="@{/update/{id}(id=${person.Id})}">edit</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
