@@ -3,7 +3,7 @@ package spring;
 /**
  * Spring Boot (Spring Boot + h2 database + tests)
  * @author Alexej Lange
- * @version 30 Nov 2022
+ * @version 6 Dec 2022
  *
  */
 
